@@ -43,7 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    return GestureDetector(
+    return Scaffold(
+      body: GestureDetector(
       onTap: () {
         if (showDrawer) {
           setState(() {
@@ -255,6 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ])),
             ))
       ]),
+    ),
     );
   }
 }
