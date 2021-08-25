@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:PetApp/configuration.dart';
 import 'package:PetApp/widgets/pet_categories.dart';
-import 'package:PetApp/widgets/pet_category_display.dart';
 import 'package:PetApp/widgets/search_bar.dart';
+import 'package:PetApp/widgets/pet_category_display.dart';
+import 'package:PetApp/configuration.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
