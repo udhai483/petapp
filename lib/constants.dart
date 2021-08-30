@@ -34,7 +34,7 @@ const List<String> dropDownValues = [
   'Maharagama	',
   'Kotikawatta',
   'Anuradhapura',
-  'Vavuniya '
+  'Vavuniya ',
 ];
 List<DogModel> dogList = [
   DogModel(
