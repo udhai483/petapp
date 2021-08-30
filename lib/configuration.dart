@@ -14,11 +14,10 @@ List<BoxShadow> customShadow = [
 ];
 
 List<Map> categories = [
-  {"name": "Cats", "iconPath": "images/cat.png"},
-  {"name": "Dogs", "iconPath": "images/dog.png"},
-  {"name": "Bunnies", "iconPath": "images/bunny.png"},
-  {"name": "Birds", "iconPath": "images/bird.png"},
-  {"name": "Horses", "iconPath": "images/horse.png"},
+  {"name": "Trainees", "iconPath": "images/bunny.jpeg"},
+  {"name": "Breeders", "iconPath": "images/Breeder.jpeg"},
+  {"name": "KASL", "iconPath": "images/KASL.jpeg"},
+  {"name": "CKC", "iconPath": "images/CKC.jpeg"},
 ];
 
 List<Map> dogs = [
