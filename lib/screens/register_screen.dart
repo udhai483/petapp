@@ -1,19 +1,17 @@
 import 'dart:ui' show FontWeight, Radius;
-import 'package:PetApp/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:PetApp/colors.dart';
 import 'package:PetApp/screens/home_screen.dart';
 import '../constants.dart';
 
-class LoginScreen extends StatefulWidget {
-  static String routeName = '/loginScreen';
-  const LoginScreen({Key key}) : super(key: key);
+class RegistrationScreen extends StatefulWidget {
+  const RegistrationScreen({Key key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _RegistrationScreenState createState() => _RegistrationScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegistrationScreenState extends State<RegistrationScreen> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   String _email, _password;
 
@@ -40,10 +38,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   Stack(
                     children: <Widget>[
                       Image.asset(
-                        bgimage,
+                        bgRegister,
                         height: heigth * 0.40,
                         width: width,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                       ),
                       Container(
                         height: heigth * 0.40,
@@ -80,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: const EdgeInsets.only(left: 10.0, top: 20),
                     child: Container(
                       child: Text(
-                        "  $logingString",
+                        "  $registerString",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 22),
                       ),
@@ -139,15 +137,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderSide: BorderSide(color: primaryColor)),
                           prefixIcon:
                               Icon(Icons.lock_open, color: primaryColor),
-                          labelText: "PASSSWORD",
+                          labelText: "PASSWORD",
                           labelStyle:
                               TextStyle(color: primaryColor, fontSize: 16)),
                     ),
                   ),
-                  Align(
-                      alignment: Alignment.centerRight,
-                      child: TextButton(
-                          onPressed: () {}, child: Text(forgetText))),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Center(
                       child: SizedBox(
                           height: heigth * 0.08,
@@ -176,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               }
                             },
                             child: Text(
-                              "Login to Account",
+                              "Register Account",
                               style: TextStyle(
                                   letterSpacing: 0.5,
                                   fontWeight: FontWeight.w500,
@@ -187,19 +184,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text("Dont' have an account?"),
+                      Text("Already have an account?"),
                       FlatButton(
                           onPressed: () {
-                            FocusScope.of(context).unfocus();
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => RegistrationScreen(),
-                              ),
-                            );
+                            Navigator.pop(context);
                           },
-                          child: Text("Create Account",
+                          child: Text("Login Account",
                               style:
                                   TextStyle(color: primaryColor, fontSize: 16)))
                     ],
